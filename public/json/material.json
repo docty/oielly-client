@@ -1,0 +1,92 @@
+[
+    {
+        "id":1, 
+        "name": "Educa", 
+        "price": 50.00,  
+        "images":[
+            {
+                "id":1,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            },
+            {
+                "id":2,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            }
+        ]
+    },
+    {
+        "id":2, 
+        "name": "Clasin", 
+        "price": 60.00,  
+        "images":[
+            {
+                "id":1,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            },
+            {
+                "id":2,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            }
+        ]
+    },
+    {
+        "id":3, 
+        "name": "senti", 
+        "price": 70.00,  
+        "images":[
+            {
+                "id":1,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            },
+            {
+                "id":2,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            }
+        ]
+    },
+    {
+        "id":4, 
+        "name": "Rane", 
+        "price": 30.00,  
+        "images":[
+            {
+                "id":1,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            },
+            {
+                "id":2,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            }
+        ]
+    },
+    {
+        "id":5, 
+        "name": "Limp", 
+        "price": 85.00,  
+        "images":[
+            {
+                "id":1,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            },
+            {
+                "id":2,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            }
+        ]
+    },
+    {
+        "id":6, 
+        "name": "Amanec", 
+        "price": 90.00,  
+        "images":[
+            {
+                "id":1,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            },
+            {
+                "id":2,
+                "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+            }
+        ]
+    }
+]

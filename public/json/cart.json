@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Adepa Material",
+        "price": 50.0,
+        "quantity": 2,
+        "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Bolt Style",
+        "price": 45.0,
+        "quantity": 1,
+        "url":"https://oielly.netlify.app/hm-1-slider-1.png"
+    }
+]
