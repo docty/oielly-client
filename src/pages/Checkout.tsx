@@ -18,8 +18,8 @@ import {
     Card,
     Radio,
     Paragraph,
-} from "@docty68/widget";
-import oielly from "@docty68/oielly-gateway";
+} from "@synevix/react-widget";
+import oielly from "@synevix/oielly-gateway";
 import Intro from "../components/Intro";
 import { useAuth } from "../utility/userContext";
 import { IGift, IUser } from "../interface/type";

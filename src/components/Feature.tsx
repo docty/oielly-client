@@ -1,5 +1,5 @@
-import oielly from '@docty68/oielly-gateway';
-import { Grid, Cage, Heading, Flexbox, Image, Paragraph, Button, Card } from '@docty68/widget';
+import oielly from '@synevix/oielly-gateway';
+import { Grid, Cage, Heading, Flexbox, Image, Paragraph, Button, Card } from '@synevix/react-widget';
 import { Children, useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom"
 import cart1 from '../assets/images/categories/item_1.png';
@@ -25,7 +25,8 @@ const Item = (props: IFeature) => {
 
     useEffect(() => {
         oielly.selection.list({
-            status: props.status,
+        
+            //status: props.status,
            response: (success: any, error: any) => {
                 if (error) { console.error(error); return }
                 setMaterials(success)

@@ -1,4 +1,4 @@
-import { Cage, Grid, Heading, Paragraph } from "@docty68/widget";
+import { Cage, Grid, Heading, Paragraph } from "@synevix/react-widget";
 import Intro from "../components/Intro";
 
 const Faq = () => (

@@ -1,10 +1,10 @@
 import Intro from '../components/Intro';
 import blog3 from '../assets/images/blog/single/1.jpg';
-import { Image, Cage, Grid, Heading, Paragraph, Flexbox, SearchField } from '@docty68/widget';
+import { Image, Cage, Grid, Heading, Paragraph, Flexbox, SearchField } from '@synevix/react-widget';
 import { Link, useParams } from 'react-router-dom';
 import { Box } from '../components/Box';
 import blog2 from "../assets/images/blog/1_xs.jpg";
-import oielly from '@docty68/oielly-gateway';
+import oielly from '@synevix/oielly-gateway';
 import { useState, useEffect } from 'react';
 import { IBlog } from './Blog';
 

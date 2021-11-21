@@ -1,7 +1,7 @@
-import { Button, Cage, TextField, Grid, Heading, Paragraph, TextArea } from '@docty68/widget';
+import { Button, Cage, TextField, Grid, Heading, Paragraph, TextArea } from '@synevix/react-widget';
 import { useState, useRef } from "react";
 import Intro from '../components/Intro';
-import oielly from '@docty68/oielly-gateway'
+import oielly from '@synevix/oielly-gateway'
 import { Box } from '../components/Box'; 
 
 const Contact = () => {

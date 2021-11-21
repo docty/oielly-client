@@ -1,4 +1,4 @@
-import { Cage, Grid, Heading, Image } from '@docty68/widget';
+import { Cage, Grid, Heading, Image } from '@synevix/react-widget';
 import { Link } from 'react-router-dom';
 import cart1 from '../assets/images/categories/item_1.png';
 import cart2 from '../assets/images/categories/item2.png';

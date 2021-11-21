@@ -2,7 +2,7 @@ import { Children, useEffect, useState } from 'react';
 import Intro from "../components/Intro";
 import { useAuth } from '../utility/userContext';
 import { Link } from 'react-router-dom';
-import { Button, Cage, Card, Column, Flexbox, Grid, Heading, Icon, Image, Paragraph, Span, Table, TableHeader, TableItem, TableRow, TextField } from '@docty68/widget';
+import { Button, Cage, Card, Column, Flexbox, Grid, Heading, Icon, Image, Paragraph, Span, Table, TableHeader, TableItem, TableRow, TextField } from '@synevix/react-widget';
 
 
 const Cart = () => {

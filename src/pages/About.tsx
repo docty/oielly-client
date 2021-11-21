@@ -1,4 +1,4 @@
-import { Cage, Grid, Heading, Icon, Image, List, ListItem, Paragraph, Span } from '@docty68/widget';
+import { Cage, Grid, Heading, Icon, Image, List, ListItem, Paragraph, Span } from '@synevix/react-widget';
 import Intro from '../components/Intro';
 import aboutus from '../assets/images/subpages/customer.jpg';
 import store1 from '../assets/images/subpages/store-1.jpg';

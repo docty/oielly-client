@@ -1,5 +1,5 @@
-import oielly from "@docty68/oielly-gateway";
-import { Cage, Grid, Card, Heading, Paragraph, Table, TableRow, TableHeader, TableItem, Button, TextField } from "@docty68/widget"
+import oielly from "@synevix/oielly-gateway";
+import { Cage, Grid, Card, Heading, Paragraph, Table, TableRow, TableHeader, TableItem, Button, TextField } from "@synevix/react-widget"
 import { Children, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { IUser } from "../interface/type";

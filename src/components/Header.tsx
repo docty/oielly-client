@@ -15,14 +15,14 @@ import {
   ListItem,
   TextField,
 
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { useAuth } from "../utility/userContext";
 import * as css from "../utility/styling";
 import Modal from "./Modal";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import { ILogin } from "../interface/type";
 
 const Header = () => {
@@ -116,7 +116,7 @@ const HeaderMiddle = (props: IMenuButton) => {
         <SearchField
           placeholder="Search..."
           value={search}
-          onValueChange={(e) => setSearch(e.target.value)}
+          onValueChange={(e:any) => setSearch(e.target.value)}
         />
       </form>
       <hr className={"col-span-5 md:sr-only"} />
@@ -242,7 +242,7 @@ const MobileHeader = (props: IMenuButton) => {
         <SearchField
           placeholder="Search..."
           value={search}
-          onValueChange={(e) => setSearch(e.target.value)}
+          onValueChange={(e:any) => setSearch(e.target.value)}
         />
       </form>
       <Menu className={"mx-3"}>

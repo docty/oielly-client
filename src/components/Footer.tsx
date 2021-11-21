@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Cage, Grid, Image, Heading, Paragraph, TextField, Button, Flexbox } from '@docty68/widget';
+import { Cage, Grid, Image, Heading, Paragraph, TextField, Button, Flexbox } from '@synevix/react-widget';
 import { Link } from 'react-router-dom';
-import oielly from '@docty68/oielly-gateway';
+import oielly from '@synevix/oielly-gateway';
 import logo from '../assets/images/logo.png';
 import payment from '../assets/images/payment.png';
 import { Box } from './Box';

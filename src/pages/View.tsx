@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { Cage, Grid, Heading, Image, Paragraph, Button, TextField, TextArea, Table, TableRow, TableHeader, TableItem } from '@docty68/widget';
-import oielly from '@docty68/oielly-gateway';
+import { Cage, Grid, Heading, Image, Paragraph, Button, TextField, TextArea, Table, TableRow, TableHeader, TableItem } from '@synevix/react-widget';
+import oielly from '@synevix/oielly-gateway';
 import ReactGA from 'react-ga';
 import { Tab as Tabbing, TabItem as TabItems } from "../components/Tab";
 import Intro from "../components/Intro";

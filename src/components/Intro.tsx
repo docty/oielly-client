@@ -1,4 +1,4 @@
-import { Flexbox, Heading, Breadcrumb } from "@docty68/widget";
+import { Flexbox, Heading, Breadcrumb } from "@synevix/react-widget";
 import { IIntro } from "../interface/type";
 
 const Intro = (props: IIntro) => (

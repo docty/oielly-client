@@ -4,9 +4,9 @@
   "private": true,
   "author": "Synevix <synevix@gmail.com>",
   "dependencies": {
-    "@docty68/oielly-gateway": "^2.1.0",
-    "@docty68/widget": "^2.4.1",
     "@react-pdf/renderer": "^2.0.20",
+    "@synevix/oielly-gateway": "^1.0.0",
+    "@synevix/react-widget": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

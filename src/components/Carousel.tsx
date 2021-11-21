@@ -1,6 +1,6 @@
 import img from '../assets/images/banner.jpg';
 import img2 from '../assets/images/buttons/banner.jpg'
-import { Cage, Carousel, Paragraph } from '@docty68/widget'
+import { Cage, Carousel, Paragraph } from '@synevix/react-widget'
 import { Link } from "react-router-dom";
 
 const Slide = () => {

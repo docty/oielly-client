@@ -1,4 +1,4 @@
-import { Card, Grid, Flexbox, Icon, Cage, Heading, Paragraph } from "@docty68/widget";
+import { Card, Grid, Flexbox, Icon, Cage, Heading, Paragraph } from "@synevix/react-widget";
 
 const Service = () => (
     <Card className="mx-4 sm:mx-4 lg:mx-32 mt-12">

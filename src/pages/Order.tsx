@@ -1,8 +1,8 @@
 import Intro from "../components/Intro";
-import { Cage, Card, Flexbox, Grid, Heading, Icon, Paragraph, Table, TableItem, TableRow } from "@docty68/widget";
+import { Cage, Card, Flexbox, Grid, Heading, Icon, Paragraph, Table, TableItem, TableRow } from "@synevix/react-widget";
 import { Children, useCallback, useEffect, useState } from "react";
 import { IUser } from "../interface/type";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import { useLocation } from 'react-router-dom';
 import {  Document, Page, Text, View, PDFDownloadLink } from "@react-pdf/renderer";
 

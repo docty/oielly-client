@@ -1,7 +1,7 @@
 import { useEffect, useState, Children, useRef } from "react";
-import { SearchField, Button, Grid, Cage, Heading, Flexbox, Option, Paragraph, Image, Card } from "@docty68/widget";
+import { SearchField, Button, Grid, Cage, Heading, Flexbox, Option, Paragraph, Image, Card } from "@synevix/react-widget";
 import { Link, useParams } from "react-router-dom";
-import oielly from '@docty68/oielly-gateway';
+import oielly from '@synevix/oielly-gateway';
 import Intro from "../components/Intro";
 import { IProduct } from "../interface/type";
 import { useAuth } from "../utility/userContext";
@@ -45,7 +45,7 @@ const LeftPane = () => (
                 className={''}
                 placeholder="Search..."
                 value={''}
-                onValueChange={(e) => console.log(e.target.value)}
+                onValueChange={(e:any) => console.log(e.target.value)}
             />
         </Cage>
         <Flexbox>

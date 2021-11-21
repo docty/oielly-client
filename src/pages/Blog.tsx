@@ -10,10 +10,10 @@ import {
     Flexbox,
     Paragraph,
     Image,
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import { Box } from "../components/Box";
 import { Children, useEffect, useState } from 'react';
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 
 const Blog = () => {
     const [blog, setBlog] = useState<IBlog[]>([]);

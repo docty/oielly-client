@@ -1,4 +1,4 @@
-import { Cage } from "@docty68/widget";
+import { Cage } from "@synevix/react-widget";
 import Slide from "../components/Carousel";
 import Service from "../components/Service";
 import Category from '../components/Category';
