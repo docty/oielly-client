@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
-import '@synevix/widget/dist/esm/widget.css' 
+import '@synevix/react-widget/dist/esm/widget.css' 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import routing from './routing';
