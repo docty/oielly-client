@@ -1,4 +1,4 @@
-import oielly from '@synevix/oielly-gateway';
+//import oielly from '@synevix/oielly-gateway';
 import { Grid, Cage, Heading, Flexbox, Image, Paragraph, Button, Card } from '@synevix/react-widget';
 import { Children, useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom"
@@ -21,7 +21,7 @@ const Feature = () => {
 const Item = (props: IFeature) => {
     const toastRef = useRef<HTMLDivElement>(null);
     const [state, dispatch] = useAuth();
-    const [materials, setMaterials] = useState<IProduct[]>([]);
+    const [materials, ] = useState<IProduct[]>([]);
 
     useEffect(() => {
         // oielly.selection.list({
