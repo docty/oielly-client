@@ -22,7 +22,7 @@ import Footer from './components/Footer';
 import RouteNotFound from './pages/404';
 import Faq from './pages/Faq';
 import Account from './pages/Account';
-import RouterChangeTracker from './utility/RouterChangeTracker';
+// import RouterChangeTracker from './utility/RouterChangeTracker';
 // TODO Add 404 page
 const routing =
   <Router>
@@ -45,7 +45,7 @@ const routing =
           <Route path="/" component={Home}  />
           <Route path="**" component={RouteNotFound} />
           <Footer />
-          <RouterChangeTracker/>
+          {/* <RouterChangeTracker/> */}
         </Standard>
       </Fragment>
     </Switch>
