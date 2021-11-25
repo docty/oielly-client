@@ -30,19 +30,19 @@ const routing =
       <Fragment>
         <Standard>
           <Header />
-          <Route path="/material/:id" component={Material} />
+          <Route path="/material/:id"   component={Material} />
           <Route path="/view/:id" component={View} />
           <Route path="/style" component={Style} />
-          <Route path="/cart" component={Cart} exact />
+          <Route path="/cart" component={Cart}  />
           <Route path="/checkout" component={Checkout} />
           <Route path="/order" component={Order} />
           <Route path="/about-us" component={About} />
           <Route path='/contact-us' component={Contact} />
-          <Route path='/blog' component={Blog} exact />
+          <Route path='/blog' component={Blog}  />
           <Route path='/blog/:referenceId' component={Blog_View} />
           <Route path="/faq" component={Faq} />
           <Route path="/account" component={Account} />
-          <Route path="/" component={Home} exact />
+          <Route path="/" component={Home}  />
           <Route path="**" component={RouteNotFound} />
           <Footer />
           <RouterChangeTracker/>
