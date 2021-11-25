@@ -24,14 +24,14 @@ const Item = (props: IFeature) => {
     const [materials, setMaterials] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        oielly.selection.list({
+        // oielly.selection.list({
         
-            //status: props.status,
-           response: (success: any, error: any) => {
-                if (error) { console.error(error); return }
-                setMaterials(success)
-            }
-        })
+        //     //status: props.status,
+        //    response: (success: any, error: any) => {
+        //         if (error) { console.error(error); return }
+        //         setMaterials(success)
+        //     }
+        // })
 
     }, [props.status]);
 

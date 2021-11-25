@@ -19,7 +19,7 @@ import Blog from './pages/Blog';
 import Blog_View from './pages/Blog_View';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import RouteNotFound from './pages/404';
+//import RouteNotFound from './pages/404';
 import Faq from './pages/Faq';
 import Account from './pages/Account';
 // import RouterChangeTracker from './utility/RouterChangeTracker';
@@ -43,7 +43,7 @@ const routing =
           <Route path="/faq" component={Faq} />
           <Route path="/account" component={Account} />
           <Route path="/" component={Home}  />
-          <Route path="**" component={RouteNotFound} />
+          {/* <Route path="**" component={RouteNotFound} /> */}
           <Footer />
           {/* <RouterChangeTracker/> */}
         </Standard>

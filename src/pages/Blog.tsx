@@ -26,7 +26,7 @@ const Blog = () => {
                 console.log(blog)
             }
         })
-    }, [blog])
+    })
     return (
         <Cage className="mb-12">
             <Intro name={"Blog"} />
