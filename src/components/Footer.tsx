@@ -108,10 +108,10 @@ const FooterBottom = () => (
                 <a href="#facebook" className="icon-facebook m-1"><i></i></a>
             </Box>
             <Box className={'border-white hover:bg-white hover:text-black'}>
-                <a href="#facebook" className="icon-twitter m-1"><i></i></a>
+                <a href="#twitter" className="icon-twitter m-1"><i></i></a>
             </Box>
             <Box className={'border-white hover:bg-white hover:text-black'}>
-                <a href="#facebook" className="icon-linkedin m-1"><i></i></a>
+                <a href="#instagram" className="icon-instagram m-1"><i></i></a>
             </Box>
 
              

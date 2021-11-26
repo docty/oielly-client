@@ -41,16 +41,20 @@ const Header = () => {
 
 const HeaderTop = () => {
   const [openModal, setModalOpen] = useState<boolean>(false);
-  const [user, setUser] = useState<ILogin>({ email: 'esther@gmail.com', password: '123456789' } as ILogin)
+  const [user, setUser] = useState<ILogin>({ email: 'felix@gmail.com', password: '7FB979' } as ILogin)
   const history = useHistory();
-  
+
   const signIn = () => {
     setModalOpen(false);
     oielly.guest.login({
       data: { ...user },
-      response: (success, error) => {
-        if (error) { return }
-        localStorage.setItem('token', success.referenceId)
+      response: (success: any, error) => {
+        if (error) { console.error(error); return }
+
+        if (success.message) {
+          window.sessionStorage.setItem('auth-token', success.token)
+          window.sessionStorage.setItem('referenceId', success.referenceId)
+        }
         history.push('/account')
       }
     })
@@ -76,15 +80,15 @@ const HeaderTop = () => {
           Sign in
         </Link>
       </Cage>
-       
-        <Modal isOpen={openModal} title={'Sign In'} setOpen={() => setModalOpen(false)} >
-          <TextField type={'email'} placeholder={'Enter Email Address'} className={'w-full my-3 text-black'} value={user.email} onValueChange={(e) => setUser({ ...user, email: e.target.value })} />
-          <TextField type={'password'} placeholder={'Enter Password'} className={'w-full my-3 text-black'} value={user.password} onValueChange={(e) => setUser({ ...user, password: e.target.value })} />
-          <Cage className={'w-full flex justify-center'}>
-            <Button text={'Sign In'} bgColor={'pink'} className={'p-2 w-5/12 mx-auto rounded-sm'} onClick={signIn} />
-          </Cage>
-        </Modal>
-       
+
+      <Modal isOpen={openModal} title={'Sign In'} setOpen={() => setModalOpen(false)} >
+        <TextField type={'email'} placeholder={'Enter Email Address'} className={'w-full my-3 text-black'} value={user.email} onValueChange={(e) => setUser({ ...user, email: e.target.value })} />
+        <TextField type={'password'} placeholder={'Enter Password'} className={'w-full my-3 text-black'} value={user.password} onValueChange={(e) => setUser({ ...user, password: e.target.value })} />
+        <Cage className={'w-full flex justify-center'}>
+          <Button text={'Sign In'} bgColor={'pink'} className={'p-2 w-5/12 mx-auto rounded-sm'} onClick={signIn} />
+        </Cage>
+      </Modal>
+
     </Flexbox>
   );
 }
@@ -116,7 +120,7 @@ const HeaderMiddle = (props: IMenuButton) => {
         <SearchField
           placeholder="Search..."
           value={search}
-          onValueChange={(e:any) => setSearch(e.target.value)}
+          onValueChange={(e: any) => setSearch(e.target.value)}
         />
       </form>
       <hr className={"col-span-5 md:sr-only"} />
@@ -242,7 +246,7 @@ const MobileHeader = (props: IMenuButton) => {
         <SearchField
           placeholder="Search..."
           value={search}
-          onValueChange={(e:any) => setSearch(e.target.value)}
+          onValueChange={(e: any) => setSearch(e.target.value)}
         />
       </form>
       <Menu className={"mx-3"}>

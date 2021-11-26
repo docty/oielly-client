@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
+import oielly from '@synevix/oielly-gateway';
 import '@synevix/react-widget/dist/esm/widget.css' 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -13,6 +14,7 @@ document.body.append(node);
 
 const TRACKING_ID = "UA-191903394-1"; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
+oielly.config({apiKey: '123456789'});
 
 ReactDOM.render( 
   <React.StrictMode> 

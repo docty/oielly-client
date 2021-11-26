@@ -1,11 +1,18 @@
 import oielly from "@synevix/oielly-gateway";
 import { Cage, Grid, Card, Heading, Paragraph, Table, TableRow, TableHeader, TableItem, Button, TextField } from "@synevix/react-widget"
 import { Children, useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { IUser } from "../interface/type";
 
 const Account = () => {
     const [state, setState] = useState<number>(0);
+    const history = useHistory();
+    
+    const logout = () => {
+        window.sessionStorage.removeItem('auth-token');
+        window.sessionStorage.removeItem('referenceId');
+        history.replace('/')
+    }
 
     return (
         <Cage className={'mx-4 sm:mx-4 lg:mx-32 mt-5 mb-7'}>
@@ -15,7 +22,7 @@ const Account = () => {
                     <Link to={'#orders'} onClick={() => setState(1)} className={`block font-bold text-base p-3 hover:bg-pink-200 rounded ${state === 1 ? ' active-menu ' : ''}`}>Orders</Link>
                     <Link to={'#address'} onClick={() => setState(2)} className={`block font-bold text-base p-3 hover:bg-pink-200 rounded ${state === 2 ? ' active-menu ' : ''}`}>Address</Link>
                     <Link to={'#settings'} onClick={() => setState(3)} className={`block font-bold text-base p-3 hover:bg-pink-200 rounded ${state === 3 ? ' active-menu ' : ''}`}>Settings</Link>
-                    <Link to={'#logout'} onClick={() => setState(4)} className={`block font-bold text-base p-3 hover:bg-pink-200 rounded ${state === 4 ? ' active-menu ' : ''}`}>Logout</Link>
+                    <Link to={'#logout'} onClick={logout} className={`block font-bold text-base p-3 hover:bg-pink-200 rounded ${state === 4 ? ' active-menu ' : ''}`}>Logout</Link>
                 </Card>
 
                 <Card className={'border col-span-3 md:col-span-2'}>
@@ -74,9 +81,10 @@ const Address = () => {
     const [user, setUser] = useState<IUser>({} as IUser);
     useEffect(() => {
         oielly.guest.profile({
-            referenceId: localStorage.getItem('token')!,
+            referenceId: window.sessionStorage.getItem('referenceId')!,
             response: (success, error) => {
                 if (error) { return };
+                console.log(success)
                 setUser(success)
             }
         })
@@ -99,7 +107,7 @@ const Settings = () => {
 
     useEffect(() => {
         oielly.guest.profile({
-            referenceId: localStorage.getItem('token')!,
+            referenceId: window.sessionStorage.getItem('referenceId')!,
             response: (success, error) => {
                 if (error) { return };
                 setUser(success)
@@ -108,14 +116,14 @@ const Settings = () => {
     }, [])
 
     const submitChanges = () => {
-        // oielly.guest.update({
-        //     referenceId: localStorage.getItem('token')!,
-        //     data: { ...user },
-        //     response: (success, error) => {
-        //         if (error) { console.log(error); return };
-        //         console.log(success)
-        //     }
-        // })
+        oielly.guest.update({
+            referenceId: window.sessionStorage.getItem('referenceId')!,
+            data: { ...user },
+            response: (success, error) => {
+                if (error) { console.log(error); return };
+                console.log(success)
+            }
+        })
     }
     return (
         <>
