@@ -41,7 +41,7 @@ const Header = () => {
 
 const HeaderTop = () => {
   const [openModal, setModalOpen] = useState<boolean>(false);
-  const [user, setUser] = useState<ILogin>({ email: 'felix@gmail.com', password: '7FB979' } as ILogin)
+  const [user, setUser] = useState<ILogin>({ email: 'guest@test.com', password: '16009A' } as ILogin)
   const history = useHistory();
 
   const signIn = () => {

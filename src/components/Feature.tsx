@@ -1,4 +1,4 @@
-//import oielly from '@synevix/oielly-gateway';
+import oielly from '@synevix/oielly-gateway';
 import { Grid, Cage, Heading, Flexbox, Image, Paragraph, Button, Card } from '@synevix/react-widget';
 import { Children, useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom"
@@ -6,14 +6,14 @@ import cart1 from '../assets/images/categories/item_1.png';
 import { IProduct } from '../interface/type';
 import { useAuth } from '../utility/userContext';
 import { Toast } from './Toast';
- 
+
 const Feature = () => {
-     
+
 
     return (
         <>
-            <Item title={'Popular'} status={'popular'}/>
-            <Item title={'New Arrival'} status={'new_arrival'}/>
+            <Item title={'Popular'} status={'popular'} />
+            <Item title={'New Arrival'} status={'new_arrival'} />
         </>
     );
 };
@@ -21,17 +21,17 @@ const Feature = () => {
 const Item = (props: IFeature) => {
     const toastRef = useRef<HTMLDivElement>(null);
     const [state, dispatch] = useAuth();
-    const [materials, ] = useState<IProduct[]>([]);
+    const [materials, setMaterials] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        // oielly.selection.list({
-        
-        //     //status: props.status,
-        //    response: (success: any, error: any) => {
-        //         if (error) { console.error(error); return }
-        //         setMaterials(success)
-        //     }
-        // })
+        oielly.selection.list({
+            status: props.status,
+            response: (success: any, error: any) => {
+                if (error) { console.error(error); return }
+                console.log(success)
+                setMaterials(success)
+            }
+        })
 
     }, [props.status]);
 
