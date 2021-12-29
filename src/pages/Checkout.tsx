@@ -12,7 +12,6 @@ import {
     TableRow,
     TextArea,
     TextField,
-    TableHeader,
     Button,
     Label,
     Card,
@@ -318,14 +317,8 @@ const Checkout = () => {
                                 "bg-gray-800 font-bold text-white py-2 px-4 mb-3 text-base rounded"
                             }
                         />
-                        <Table>
-                            <thead>
-                                <TableRow>
-                                    <TableHeader>Product</TableHeader>
-                                    <TableHeader>Total</TableHeader>
-                                </TableRow>
-                            </thead>
-                            <tbody>
+                        <Table header={['Product', 'Total']}>
+                             
                                 {Children.toArray(
                                     state.map((item: any) => (
                                         <TableRow>
@@ -354,7 +347,7 @@ const Checkout = () => {
                                         &#8373; {totalAmount * ntil + totalAmount}{" "}
                                     </TableItem>
                                 </TableRow>
-                            </tbody>
+                             
                         </Table>
                         <Button
                             bgColor={"pink"}

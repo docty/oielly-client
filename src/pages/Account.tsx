@@ -1,5 +1,5 @@
 import oielly from "@synevix/oielly-gateway";
-import { Cage, Grid, Card, Heading, Paragraph, Table, TableRow, TableHeader, TableItem, Button, TextField } from "@synevix/react-widget"
+import { Cage, Grid, Card, Heading, Paragraph, Table, TableRow, TableItem, Button, TextField } from "@synevix/react-widget"
 import { Children, useEffect, useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import { IUser } from "../interface/type";
@@ -47,16 +47,8 @@ const Orders = () => {
     return (
         <>
             <Heading type={'H3'} text={'Orders'} className={'font-bold bg-gray-800 p-2 px-4 rounded text-white mb-3 text-base'} />
-            <Table>
-                <thead>
-                    <TableRow>
-                        <TableHeader>SN</TableHeader>
-                        <TableHeader>Item</TableHeader>
-                        <TableHeader>Price (GHC)</TableHeader>
-                        <TableHeader>Action</TableHeader>
-                    </TableRow>
-                </thead>
-                <tbody>
+            <Table header={['SN', 'Item', 'Price (GHC)', 'Action']}>
+                 
 
                     {
                         Children.toArray(order.map(item => (
@@ -72,7 +64,7 @@ const Orders = () => {
                     }
 
 
-                </tbody>
+                
             </Table>
         </>
     )

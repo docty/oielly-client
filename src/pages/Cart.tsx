@@ -2,7 +2,7 @@ import { Children, useEffect, useState } from 'react';
 import Intro from "../components/Intro";
 import { useAuth } from '../utility/userContext';
 import { Link } from 'react-router-dom';
-import { Button, Cage, Card, Column, Flexbox, Grid, Heading, Icon, Image, Paragraph, Span, Table, TableHeader, TableItem, TableRow, TextField } from '@synevix/react-widget';
+import { Button, Cage, Card, Column, Flexbox, Grid, Heading, Icon, Image, Paragraph, Span, Table, TableItem, TableRow, TextField } from '@synevix/react-widget';
 
 
 const Cart = () => {
@@ -58,19 +58,9 @@ const LeftPane = ({ setTotal }: { setTotal: (e: number) => void }) => {
 
     return (
         <Column className={'col-span-3 md:col-span-2'}>
-            <Table className="">
-                <thead>
-                    <TableRow className={'sr-only md:not-sr-only uppercase'}>
-
-                        <TableHeader>Product</TableHeader>
-                        <TableHeader>Name</TableHeader>
-                        <TableHeader>Unit Price</TableHeader>
-                        <TableHeader>yards</TableHeader>
-                        <TableHeader>Subtotal</TableHeader>
-
-                    </TableRow>
-                </thead>
-                <tbody>
+            <Table className="" header={['Product', 'Name', 'Unit Price', 'Yards', 'Sub Total']}>
+                 
+                
                     {Children.toArray(state.map((item: any, index: number) => (
                         <TableRow>
                             <TableItem className="">
@@ -97,7 +87,7 @@ const LeftPane = ({ setTotal }: { setTotal: (e: number) => void }) => {
                             </TableItem>
                         </TableRow>
                     )))}
-                </tbody>
+                
             </Table>
             <Flexbox justifyContent={'between'} className={'mt-4'}>
                 <Link to={'/material/gtp'} className="bg-black p-3 rounded text-white">

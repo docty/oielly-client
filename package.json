@@ -6,7 +6,7 @@
   "dependencies": {
     "@react-pdf/renderer": "^2.0.20",
     "@synevix/oielly-gateway": "^1.1.0",
-    "@synevix/react-widget": "^1.1.0",
+    "@synevix/react-widget": "^1.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

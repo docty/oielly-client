@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Cage, Grid, Heading, Image, Paragraph, Button, TextField, TextArea, Table, TableRow, TableHeader, TableItem } from '@synevix/react-widget';
+import { Cage, Grid, Heading, Image, Paragraph, Button, TextField, TextArea, Table, TableRow,  TableItem } from '@synevix/react-widget';
 import oielly from '@synevix/oielly-gateway';
 import ReactGA from 'react-ga';
 import { Tab as Tabbing, TabItem as TabItems } from "../components/Tab";
@@ -102,31 +102,31 @@ const GetDescription = (props: IView) => {
             <Tabbing direction={'col'}>
                 <TabItems text={'Specifications'}>
                     <Table className={'mt-4'}>
-                        <tbody>
+                         
                             <TableRow>
-                                <TableHeader>Material</TableHeader>
+                                <TableItem>Material</TableItem>
                                 <TableItem className="pl-4">{props.materialName}</TableItem>
                             </TableRow>
                             <TableRow>
-                                <TableHeader>Brand </TableHeader>
+                                <TableItem >Brand </TableItem >
                                 <TableItem className="pl-4">{props.manufacturerBrand}</TableItem>
                             </TableRow>
                             <TableRow>
-                                <TableHeader>Price
-                                </TableHeader>
+                                <TableItem>Price
+                                </TableItem>
                                 <TableItem className="pl-4">{'GHC ' + props.price}</TableItem>
                             </TableRow>
                             <TableRow>
-                                <TableHeader>
-                                    Categories</TableHeader>
+                                <TableItem>
+                                    Categories</TableItem>
                                 <TableItem className="border-no pl-4">{props.category}</TableItem>
                             </TableRow>
                             <TableRow>
-                                <TableHeader>
-                                    Tag</TableHeader>
+                                <TableItem>
+                                    Tag</TableItem >
                                 <TableItem className="border-no pl-4">{props.tag}</TableItem>
                             </TableRow>
-                        </tbody>
+                        
                     </Table>
                 </TabItems>
                 <TabItems text={'Description'}>
