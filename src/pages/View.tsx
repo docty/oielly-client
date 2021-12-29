@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Cage, Grid, Heading, Image, Paragraph, Button, TextField, TextArea, Table, TableRow,  TableItem } from '@synevix/react-widget';
+import { Cage, Grid, Heading, Image, Paragraph, Button, TextField, TextArea, Table, TableRow, TableItem, Flexbox } from '@synevix/react-widget';
 import oielly from '@synevix/oielly-gateway';
 import ReactGA from 'react-ga';
 import { Tab as Tabbing, TabItem as TabItems } from "../components/Tab";
@@ -7,7 +7,8 @@ import Intro from "../components/Intro";
 import { IReview, IView } from '../interface/type';
 import { useAuth } from '../utility/userContext';
 import { useParams } from 'react-router-dom';
-import image2 from '../assets/images/item1.png';
+import image2 from '../assets/images/categories/item_1.png';
+import image3 from '../assets/images/categories/item2.png';
 import { Toast } from "../components/Toast";
 import { Rating } from '../components/Rating';
 
@@ -38,7 +39,7 @@ const View = () => {
 const GetDetails = (props: IView) => {
     const [state, dispatch] = useAuth();
     const toastRef = useRef<HTMLDivElement>(null);
-
+    const [currentImage, setCurrentImage] = useState<number>(1);
     const addToCart = (data: any) => {
         toastRef.current!.style.left = '4px';
         const { id, materialName, price, imageUrl, productId } = data;
@@ -50,7 +51,7 @@ const GetDetails = (props: IView) => {
         ReactGA.event({
             category: 'User',
             action: 'Added to cart'
-          });
+        });
     }
 
 
@@ -60,9 +61,24 @@ const GetDetails = (props: IView) => {
     return (
         <Grid md={'2'} gap={'5'} className="">
             {/* TODO Image not showing */}
-            <Cage>
-                <Image source={image2} alt={'Item'} />
-            </Cage>
+            <Flexbox gap='1' >
+                <Flexbox direction='col' className='flex-1 h-full' style={{ height: '610px' }}>
+                    <Cage className='border cursor-pointer' onClick={() => setCurrentImage(1)}>
+                        <Image source={image2} alt={'Item'} style={{ height: '150px', width: '100%' }} className='mx-auto my-1' />
+                    </Cage>
+                    <Cage className='  border cursor-pointer' onClick={() => setCurrentImage(2)}>
+                        <Image source={image3} alt={'Item'} style={{ height: '150px', width: '100%' }} className='mx-auto my-1' />
+                    </Cage>
+
+
+                </Flexbox>
+                <Cage style={{ flex: 3, }}>
+                    <Image source={image2} alt={'Item'}  className={`h-full ${currentImage !== 1 && 'hidden'}`} />
+                    <Image source={image3} alt={'Item'} className={`h-full ${currentImage !== 2 && 'hidden'}`} />
+
+                </Cage>
+
+            </Flexbox>
             <Cage>
                 <Heading type={'H1'} text={props.materialName} className="font-bold text-3xl capitalise" />
                 <Paragraph text={'CATEGORY ' + props.category} className={'text-xs my-4'} />
@@ -101,32 +117,32 @@ const GetDescription = (props: IView) => {
         <Cage className={'mt-5 w-full'}>
             <Tabbing direction={'col'}>
                 <TabItems text={'Specifications'}>
-                    <Table className={'mt-4'}>
-                         
-                            <TableRow>
-                                <TableItem>Material</TableItem>
-                                <TableItem className="pl-4">{props.materialName}</TableItem>
-                            </TableRow>
-                            <TableRow>
-                                <TableItem >Brand </TableItem >
-                                <TableItem className="pl-4">{props.manufacturerBrand}</TableItem>
-                            </TableRow>
-                            <TableRow>
-                                <TableItem>Price
-                                </TableItem>
-                                <TableItem className="pl-4">{'GHC ' + props.price}</TableItem>
-                            </TableRow>
-                            <TableRow>
-                                <TableItem>
-                                    Categories</TableItem>
-                                <TableItem className="border-no pl-4">{props.category}</TableItem>
-                            </TableRow>
-                            <TableRow>
-                                <TableItem>
-                                    Tag</TableItem >
-                                <TableItem className="border-no pl-4">{props.tag}</TableItem>
-                            </TableRow>
-                        
+                    <Table className={'mt-4'} header={['Property', 'Value']}>
+
+                        <TableRow>
+                            <TableItem>Material</TableItem>
+                            <TableItem className="pl-4">{props.materialName}</TableItem>
+                        </TableRow>
+                        <TableRow>
+                            <TableItem >Brand </TableItem >
+                            <TableItem className="pl-4">{props.manufacturerBrand}</TableItem>
+                        </TableRow>
+                        <TableRow>
+                            <TableItem>Price
+                            </TableItem>
+                            <TableItem className="pl-4">{'GHC ' + props.price}</TableItem>
+                        </TableRow>
+                        <TableRow>
+                            <TableItem>
+                                Categories</TableItem>
+                            <TableItem className="border-no pl-4">{props.category}</TableItem>
+                        </TableRow>
+                        <TableRow>
+                            <TableItem>
+                                Tag</TableItem >
+                            <TableItem className="border-no pl-4">{props.tag}</TableItem>
+                        </TableRow>
+
                     </Table>
                 </TabItems>
                 <TabItems text={'Description'}>
