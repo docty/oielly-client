@@ -124,7 +124,7 @@ const Checkout = () => {
                                     text={"Apply Coupon"}
                                     bgColor={"pink"}
                                     className={
-                                        "text-white p-2 rounded-tl-none rounded-bl-none border border-pink-600"
+                                        "text-white p-2 rounded-tl-none rounded-bl-none border "
                                     }
                                     onClick={onGift}
                                 />
@@ -140,7 +140,7 @@ const Checkout = () => {
                                     text={"Apply voucher"}
                                     bgColor={"pink"}
                                     className={
-                                        "text-white p-2 rounded-tl-none rounded-bl-none border border-pink-600"
+                                        "text-white p-2 rounded-tl-none rounded-bl-none border"
                                     }
                                     onClick={onGift}
                                 />

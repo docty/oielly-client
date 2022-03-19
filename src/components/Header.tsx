@@ -110,7 +110,7 @@ const HeaderMiddle = (props: IMenuButton) => {
         iconSize={"25px"}
         onClick={() => props.setState(true)}
         icon={"icon-menu7"}
-        className={"md:sr-only hover:text-pink-300"}
+        className={"md:sr-only hover:text-pink-300 bg-transparent"}
       />
 
       <form
@@ -238,7 +238,7 @@ const MobileHeader = (props: IMenuButton) => {
     >
       <Button
         iconSize={"25px"}
-        className={"text-white p-3 hover:text-pink-300"}
+        className={"text-white p-3 hover:text-pink-300 bg-transparent"}
         icon={"icon-cross2"}
         onClick={() => props.setState(false)}
       />

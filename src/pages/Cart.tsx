@@ -2,7 +2,7 @@ import { Children, useEffect, useState } from 'react';
 import Intro from "../components/Intro";
 import { useAuth } from '../utility/userContext';
 import { Link } from 'react-router-dom';
-import { Button, Cage, Card, Column, Flexbox, Grid, Heading, Icon, Image, Paragraph, Span, Table, TableItem, TableRow, TextField } from '@synevix/react-widget';
+import { Button, Cage, Card,   Flexbox, Grid, Heading, Icon, Image, Paragraph, Span, Table, TableItem, TableRow, TextField } from '@synevix/react-widget';
 
 
 const Cart = () => {
@@ -57,7 +57,7 @@ const LeftPane = ({ setTotal }: { setTotal: (e: number) => void }) => {
     }
 
     return (
-        <Column className={'col-span-3 md:col-span-2'}>
+        <Grid className={'col-span-3 md:col-span-2'}>
             <Table className="" header={['Product', 'Name', 'Unit Price', 'Yards', 'Sub Total']}>
                  
                 
@@ -96,7 +96,7 @@ const LeftPane = ({ setTotal }: { setTotal: (e: number) => void }) => {
                 </Link>
                 <Button bgColor={'gray'} className="rounded text-white p-3" text={'Clear Cart'} onClick={() => clearCart()} />
             </Flexbox>
-        </Column>
+        </Grid>
 
     );
 }

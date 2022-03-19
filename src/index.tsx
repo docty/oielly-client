@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import oielly from '@synevix/oielly-gateway';
 import '@synevix/react-widget/dist/esm/widget.css' 
-import './index.css';
+import './tailwind.css';
 import reportWebVitals from './reportWebVitals';
 import routing from './routing';
 

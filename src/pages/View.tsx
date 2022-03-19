@@ -60,24 +60,24 @@ const GetDetails = (props: IView) => {
 
     return (
         <Grid md={'2'} gap={'5'} className="">
-            {/* TODO Image not showing */}
-            <Flexbox gap='1' >
-                <Flexbox direction='col' className='flex-1 h-full' style={{ height: '610px' }}>
-                    <Cage className='border cursor-pointer' onClick={() => setCurrentImage(1)}>
-                        <Image source={image2} alt={'Item'} style={{ height: '150px', width: '100%' }} className='mx-auto my-1' />
+            {/* TODO Image not showing style={{ height: '610px' }} */}
+            <Flexbox gap='1' className='flex-col md:flex-row bg-red-500'>
+                <Flexbox className='bg-blue-500  md:flex-col flex-1 order-2 md:order-1'>
+                    <Cage className='border bg-yellow-600 flex-1 cursor-pointer' onClick={() => setCurrentImage(1)}>
+                        <Image source={image2} alt={'Item'} className='mx-auto my-1 h-full w-full' />
                     </Cage>
-                    <Cage className='  border cursor-pointer' onClick={() => setCurrentImage(2)}>
-                        <Image source={image3} alt={'Item'} style={{ height: '150px', width: '100%' }} className='mx-auto my-1' />
+                    <Cage className='border bg-yellow-200 flex-1 cursor-pointer' onClick={() => setCurrentImage(2)}>
+                        <Image source={image3} alt={'Item'}  className='mx-auto my-1 h-full w-full' />
                     </Cage>
-
-
                 </Flexbox>
-                <Cage style={{ flex: 3, }}>
-                    <Image source={image2} alt={'Item'}  className={`h-full ${currentImage !== 1 && 'hidden'}`} />
-                    <Image source={image3} alt={'Item'} className={`h-full ${currentImage !== 2 && 'hidden'}`} />
-
+                <Cage className='bg-green-500 flex-2 order-1 md:order-2' style={{height: '100px'}}>
+                    <Cage className='border bg-pink-600'>
+                        <Image source={image2} alt={'Item'}  className={` ${currentImage !== 1 && 'hidden'}`} />
+                        <Image source={image3} alt={'Item'} className={`w-full ${currentImage !== 2 && 'hidden'}`} />
+                    </Cage>
                 </Cage>
 
+                
             </Flexbox>
             <Cage>
                 <Heading type={'H1'} text={props.materialName} className="font-bold text-3xl capitalise" />
