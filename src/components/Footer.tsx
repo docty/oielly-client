@@ -36,17 +36,17 @@ const FooterTop = () => {
 
     return (
 
-        <Grid md={'3'} className={'mb-5'}>
+        <Grid md={'3'} className={'mb-5 gap-4'}>
             <Link to={"/"}>
                 <Image source={logo} alt="logo-footer" width="154" height="43" />
             </Link>
             <Cage >
-                <Heading type={'H4'} text={'Subscribe to our Newsletter'} className={'font-bold text-2xl mb-3'} />
+                <Heading type={'H4'} text={'Subscribe to our Newsletter'} className={'font-bold text-xl mb-3'} />
                 <Paragraph text={'Get all the latest information, Sales and Offers'} />
             </Cage>
-            <form onSubmit={(e) => onNewLetterSubmit(e)} className={'flex gap-3 my-2'} >
-                <TextField type="email" placeholder="Email address here..." value={state} onValueChange={(e) => setState(e.target.value)} className={'text-black w-full'} />
-                <Button type={'submit'} className="px-3 py-2 text-white uppercase font-bold" text={'Subscribe'} bgColor={'pink'} />
+            <form onSubmit={(e) => onNewLetterSubmit(e)} className={'flex gap-3 w-full md:flex-col lg:flex-row'} >
+                <TextField type="email" placeholder="Email address here..." value={state} onValueChange={(e) => setState(e.target.value)} className={'text-black '} />
+                <Button type={'submit'} className="px-3 py-2 text-white uppercase font-bold" text={'Subscribe'}  />
             </form>
         </Grid>
 
@@ -96,7 +96,7 @@ const FooterMiddle = () => (
 )
 
 const FooterBottom = () => (
-    <Grid md={'3'} className="footer-bottom pb-3">
+    <Grid md={'3'} className="footer-bottom pb-3 gap-4">
 
         {/* TODO Change payment logo */}
         <Image source={payment} alt="payment" width="159" height="29" />

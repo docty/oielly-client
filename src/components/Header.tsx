@@ -67,14 +67,14 @@ const HeaderTop = () => {
     >
       <Paragraph text={"Welcome to Oielly"} />
       <Cage>
-        <Link to={"/contact-us"} className={"sr-only sm:not-sr-only mx-5"}>
+        <Link to={"/contact-us"} className={"sr-only md:not-sr-only mx-5"}>
           <Icon name="icon-location3" className={"mx-3"} />
           Contact
         </Link>
-        <Link to={"/assistance"} className={"sr-only sm:not-sr-only mx-5"}>
+        {/* <Link to={"/assistance"} className={"sr-only md:not-sr-only mx-5"}>
           <Icon name="icon-info22" className={"mx-3 ml-5"} />
           Need Assistance
-        </Link>
+        </Link> */}
         <Link to={"#"} className={"mx-5"} onClick={() => setModalOpen(true)}>
           <Icon name="icon-user" className={"mx-3"} />
           Sign in
@@ -111,6 +111,7 @@ const HeaderMiddle = (props: IMenuButton) => {
         onClick={() => props.setState(true)}
         icon={"icon-menu7"}
         className={"md:sr-only hover:text-pink-300 bg-transparent"}
+        style={{background: 'transparent'}}
       />
 
       <form
@@ -239,6 +240,7 @@ const MobileHeader = (props: IMenuButton) => {
       <Button
         iconSize={"25px"}
         className={"text-white p-3 hover:text-pink-300 bg-transparent"}
+        style={{background: 'transparent'}}
         icon={"icon-cross2"}
         onClick={() => props.setState(false)}
       />

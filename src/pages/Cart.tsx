@@ -90,11 +90,11 @@ const LeftPane = ({ setTotal }: { setTotal: (e: number) => void }) => {
                 
             </Table>
             <Flexbox justifyContent={'between'} className={'mt-4'}>
-                <Link to={'/material/gtp'} className="bg-black p-3 rounded text-white">
+                <Link to={'/material/gtp'} className="bg-black p-3 rounded text-white h-fit">
                     <Icon className="mx-2" name={'icon-arrow-left7'} />
                     Continue Shopping
                 </Link>
-                <Button bgColor={'gray'} className="rounded text-white p-3" text={'Clear Cart'} onClick={() => clearCart()} />
+                <Button bgColor={'gray'} className="rounded text-white p-3 h-fit" text={'Clear Cart'} onClick={() => clearCart()} />
             </Flexbox>
         </Grid>
 

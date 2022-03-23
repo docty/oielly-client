@@ -99,7 +99,7 @@ const RightPane = ({ data }: { data: IProduct[] }) => {
             </Grid>
              
             <Toast
-                className={'mt-3 -left-96'}
+                className={'mt-3 -left-80'}
                 refs={toastRef}
                 title={'Cart'}
                 message={'Material has been added to cart'}

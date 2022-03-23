@@ -112,35 +112,33 @@ const Checkout = () => {
                                 "bg-gray-800 font-bold text-white py-2 px-4 mb-3 text-base rounded"
                             }
                         />
-                        <Flexbox justifyContent={"between"} className={"gap-4"}>
-                            <Cage>
+                        <Flexbox justifyContent={"between"} className={"gap-4 w-full"}>
+                            <Cage className="flex">
                                 <TextField
                                     placeholder={"Enter coupon here"}
-                                    className={" border rounded-tr-none rounded-br-none"}
+                                    className={" border rounded-tr-none rounded-br-none flex-1"}
                                     value={gift.coupon}
                                     onValueChange={(e) => setGift({ ...gift, coupon: e.target.value })}
                                 />
                                 <Button
-                                    text={"Apply Coupon"}
-                                    bgColor={"pink"}
+                                    text={"Apply Coupon"} 
                                     className={
                                         "text-white p-2 rounded-tl-none rounded-bl-none border "
                                     }
                                     onClick={onGift}
                                 />
                             </Cage>
-                            <Cage>
+                            <Cage className="flex">
                                 <TextField
                                     placeholder={"Enter voucher gift here"}
-                                    className={" border rounded-tr-none rounded-br-none"}
+                                    className={" border rounded-tr-none rounded-br-none flex-1"}
                                     value={gift.voucher}
                                     onValueChange={(e) => setGift({ ...gift, voucher: e.target.value })}
                                 />
                                 <Button
-                                    text={"Apply voucher"}
-                                    bgColor={"pink"}
+                                    text={"Apply voucher"} 
                                     className={
-                                        "text-white p-2 rounded-tl-none rounded-bl-none border"
+                                        "text-white p-2 rounded-tl-none rounded-bl-none border "
                                     }
                                     onClick={onGift}
                                 />
